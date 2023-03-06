@@ -5,36 +5,49 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="250"
+            Spacing="20"
+            >
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
+                Text="Guessing Number Game"
                 FontSize="32"
-                HorizontalOptions="Center" />
-
+                HorizontalTextAlignment="Center"
+                />
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
+                Text="Enter a number below and submit. The application will tell you if your number is higher or lower than the target."
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                />
+            <Entry
+                x:Name="GuessSubmissionEntry"
+                Placeholder="..."
+                />
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+                x:Name="GuessSubmissionBtn"
+                Text="Submit"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="GuessSubmissionBtn_Clicked"
+                />
+            <Label
+                x:Name="ComparisonNotifierSymbol"
+                Text="~"
+                FontSize="64"
+                HorizontalOptions="Center"
+                />
+            <Label
+                x:Name="ComparisonNotifierDescription"
+                Text="The number is ~..."
+                FontSize="20"
+                HorizontalOptions="Center"
+                />
+            <Label
+                x:Name="RemainingGuesses"
+                Text="Remaining Guesses: 10/10"
+                FontSize="16"
+                HorizontalOptions="Center"
+                />
         </VerticalStackLayout>
     </ScrollView>
 
